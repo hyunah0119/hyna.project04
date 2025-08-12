@@ -1,0 +1,46 @@
+@use '../styles/common.scss' as *;
+
+.todo {
+    &-input {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 30px;
+        box-sizing: border-box;
+
+        input {
+            align-self: center;
+            width: calc(100% - 50px);
+            height: 40px;
+            border: 1px solid $mainColor;
+            border-radius: 5px;
+            padding: 10px 5px;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: $mainColorStrong;
+            }
+        }
+
+        button {
+            align-self: center;
+            height: 45px;
+            margin-left: 5px;
+            cursor: pointer;
+
+            svg {
+                height: 100%;
+                color: $mainColor;
+                vertical-align: middle;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                svg {
+                    color: $mainColorStrong;
+                }
+            }
+        }
+    }
+}
