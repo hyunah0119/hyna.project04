@@ -1,0 +1,34 @@
+.todo {
+    &-filter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        margin-top: 20px;
+        
+        label {
+            display: flex;
+            flex-flow: row wrap;
+
+            + label {
+                margin-left: 10px;
+            }
+
+            input {
+                align-self: center;
+            }
+
+            span {
+                align-self: center;
+                font-size: .875rem;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+/* mobile */
+@media (max-width: 800px) {
+    .todo {
+
+    }
+}
