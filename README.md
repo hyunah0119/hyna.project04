@@ -1,4 +1,4 @@
-# Todo List Project 04
+# Todo List Project 03
 
 ## 개요
 - React로 구현한 투두리스트
@@ -13,4 +13,4 @@
 - 로컬 스토리지 저장 (새로고침 후에도 유지)
 
 ## 연결 링크
-https://hyna-project04.vercel.app/
+https://hyna-project03.vercel.app/
