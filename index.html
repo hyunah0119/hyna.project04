@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary : #000;
+            --color-default : #333;
+            --color-sub : #666;
+            --color-gray : #e5e5e5;
+            --color-bg : #f9f9f9;
+            --color-accent : #0066ff:
+        }
+
+        @layer components {
+            /* 버튼 */
+            .btn-type01 {
+                @apply lg:min-w-[150px] lg:w-auto md:min-w-[150px] md:w-auto w-full py-3 border border-primary rounded-xl lg:hover:bg-primary lg:hover:text-white lg:hover:cursor-pointer transition duration-300 ease-in-out;
+            }
+
+            .btn-type02 {
+                @apply lg:min-w-[150px] lg:w-auto md:min-w-[150px] md:w-auto w-full py-3 border border-primary rounded-xl text-white bg-primary lg:hover:bg-default lg:hover:cursor-pointer transition duration-300 ease-in-out;
+            }
+        }
+    </style>
+</head>
+<body class="text-default text-base">
+    <!-- 
+        lg:PC 
+        md:tablet
+    -->
+    <main class="w-full h-screen bg-bg">
+        <div class="lg:w-5xl lg:mx-auto w-full bg-white pb-10">
+            <!-- 헤더 -->
+            <header class="w-full px-[20px] py-[15px] flex justify-between border-b border-gray">
+                <!-- home -->
+                <a class="h-full cursor-pointer" href="./index.html" aria-label="메인 바로가기"><i class="fa-solid fa-house lg:text-lg lg:hover:text-primary"></i></a>
+                <!-- title -->
+                <h3 class="font-bold md:text-lg">예약</h3>
+                <!-- util -->
+                <div>
+                    <!-- 로그인 전 -->
+                    <button type="button" class="lg:text-sm text-xs cursor-pointer lg:hover:font-bold">로그인</button>
+                    <!-- 로그인 후 -->
+                    <div class="hidden">
+                        <span class="lg:text-sm text-xs font-medium relative mr-[10px] after:content-[''] after:w-px after:h-full after:bg-sub after:absolute after:top-[2px] after:right-[-10px] lg:inline md:inline hidden">김민규</span>
+                        <button type="button" class="lg:text-sm text-xs cursor-pointer text-sub lg:hover:font-bold">로그아웃</button>
+                    </div>
+                </div>
+            </header>
+            <!-- 컨텐츠 -->
+            <section>
+                <!-- 설명 -->
+                <div class="w-full text-center md:py-10 py-5">
+                    <img src="../static/img/thum.jpg" class="md:w-[300px] w-[250px] mx-auto">
+                    <p class="mt-8 md:text-lg">팝업스토어 예약하시겠습니까?</p>
+                </div>
+
+                <!-- 예약 버튼 -->
+                <div class="mt-10 flex md:flex-row flex-col md:justify-center md:gap-6 gap-3 md:px-[0px] px-3">
+                    <button type="button" class="btn-type02">예약하기</button>
+                    <button type="button" class="btn-type01">예약현황</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="lg:w-5xl lg:mx-auto w-full py-5 px-3 md:text-sm text-xs text-sub">
+            @ 2025 Reservation - HYNA's Portfolio Project
+        </footer>
+    </main>
+</body>
+</html>
