@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary : #000;
+            --color-default : #333;
+            --color-sub : #666;
+            --color-gray : #e5e5e5;
+            --color-bg : #f9f9f9;
+            --color-accent : #0066ff:
+        }
+
+        @layer components {
+            /* btn */
+            .btn-type01 {
+                @apply lg:min-w-[150px] lg:w-auto md:min-w-[150px] md:w-auto w-full py-3 border border-default rounded-xl lg:hover:bg-default lg:hover:text-white lg:hover:cursor-pointer transition duration-300 ease-in-out;
+            }
+
+            .btn-type02 {
+                @apply lg:min-w-[150px] lg:w-auto md:min-w-[150px] md:w-auto w-full py-3 border border-primary rounded-xl text-white bg-primary lg:hover:bg-default lg:hover:cursor-pointer transition duration-300 ease-in-out;
+            }
+
+            /* input */
+            .input-type01 {
+                @apply lg:w-[300px] md:w-[300px] w-full border border-gray rounded-sm px-2 py-3 md:text-base text-sm;
+            }
+        }
+    </style>
+</head>
+<body class="text-default text-base">
+    <!-- 
+        lg:PC 
+        md:tablet
+    -->
+    <main class="w-full h-screen bg-bg">
+        <div class="lg:w-5xl lg:mx-auto w-full bg-white pb-10">
+            <!-- 헤더 -->
+            <header class="w-full px-[20px] py-[15px] flex justify-between border-b border-gray">
+                <!-- home -->
+                <a class="h-full cursor-pointer" href="./index.html" aria-label="메인 바로가기"><i class="fa-solid fa-house lg:text-lg"></i></a>
+                <!-- title -->
+                <h3 class="font-bold md:text-lg">로그인</h3>
+                <!-- util -->
+                <div>
+                    <!-- 로그인 전 -->
+                    <button type="button" class="lg:text-sm text-xs cursor-pointer">로그인</button>
+                </div>
+            </header>
+            <!-- 컨텐츠 -->
+            <section class="flex flex-col justify-center items-center md:py-30 py-20 md:px-0 px-5">
+                <div class="flex flex-col justify-center items-center w-full gap-3">
+                    <input type="text" class="input-type01" placeholder="아이디">
+                    <input type="password" class="input-type01" placeholder="비밀번호" maxlength="12">
+                </div>
+
+                <button class="btn-type01 lg:w-[300px] md:min-w-[300px] mt-[30px]">로그인</button>
+            </section>
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="lg:w-5xl lg:mx-auto w-full py-5 px-3 md:text-sm text-xs text-sub">
+            @ 2025 Reservation - HYNA's Portfolio Project
+        </footer>
+    </main>
+</body>
+</html>
